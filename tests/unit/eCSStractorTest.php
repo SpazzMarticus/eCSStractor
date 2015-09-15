@@ -4,7 +4,6 @@ namespace SpazzMarticus\eCSStractor;
 
 /**
  * @uses \SpazzMarticus\eCSStractor\eCSStractor
- * @covers \SpazzMarticus\eCSStractor\eCSStractor::__construct
  */
 class eCSStractorTest extends \PHPUnit_Framework_TestCase
 {
