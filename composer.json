@@ -1,0 +1,31 @@
+{
+    "name": "spazzmarticus/e-css-tractor",
+    "description": "Extracts CSS from HTML",
+    "version": "0.1.0",
+    "type": "library",
+    "keywords": ["css", "extract", "stylesheet"],
+    "authors": [
+        {
+            "name": "SpazzMarticus",
+            "homepage": "https://github.com/SpazzMarticus"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "SpazzMarticus\\eCSStractor\\": "src/"
+        },
+        "classmap": [
+            "src/"
+        ]
+    },
+    "require": {
+    },
+    "require-dev": {
+        "phpunit/phpunit": "*",
+        "phpdocumentor/phpdocumentor": "*"
+    },
+    "scripts": {
+        "test": "phpunit -c build/phpunitconfig.xml",
+        "doc": "phpdoc -c build/phpdocumentor.xml --template=\"xml\" --template=\"clean\""
+    }
+}

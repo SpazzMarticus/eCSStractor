@@ -2,3 +2,4 @@
 /nbproject/
 /build/coverage/
 /build/phpdocumentor/
+composer.lock
