@@ -1,6 +1,6 @@
 {
     "name": "spazzmarticus/e-css-tractor",
-    "description": "Extracts CSS from HTML",
+    "description": "Extracts CSS from HTML (Style-Tags)",
     "version": "0.1.0",
     "type": "library",
     "keywords": ["css", "extract", "stylesheet"],
