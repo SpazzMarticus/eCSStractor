@@ -3,6 +3,7 @@
     "description": "Extracts CSS from HTML (Style-Tags)",
     "version": "0.1.0",
     "type": "library",
+    "license":"MIT",
     "keywords": ["css", "extract", "stylesheet"],
     "authors": [
         {
