@@ -7,8 +7,9 @@ php:
   - hhvm
   - nightly
   
-before_script:
+before_install:
 - composer self-update
-- composer install --no-interaction
+install:
+- travis_retry composer install --no-interaction --prefer-source
 script: 
-- vendor/bin/phpunit -c build/phpunitconfig.xml
+- vendor/bin/phpunit --configuration ./build/phpunitconfig.xml
