@@ -1,4 +1,4 @@
-# eCSStractor
+# eCSStractor [![Build Status](https://travis-ci.org/SpazzMarticus/eCSStractor.svg?branch=master)](https://travis-ci.org/SpazzMarticus/eCSStractor)
 
 Extracts CSS from HTML `<style>`-Tags
 
