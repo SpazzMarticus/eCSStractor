@@ -42,6 +42,6 @@ class eCSStractorTest extends \PHPUnit_Framework_TestCase
         {
             return false;
         }
-        return '%w'.preg_replace('/\s/', '%w', $format).'%w';
+        return str_replace('%w%w','%w','%w'.preg_replace('/\s/', '%w', $format).'%w');
     }
 }
