@@ -454,8 +454,6 @@
 
             }
 
-            // GroupWise-Webmail entfernt diese Selektoren, darum müssen sie am Schluss stehen
-
             /**
  * Prevent modern browsers from displaying `audio` without controls.
  * Remove excess height in iOS 5 devices.
