@@ -9,7 +9,9 @@ Extracts CSS from HTML `<style>`-Tags
 
 ### Installation
 
-*still to come* 
+Install via [composer](https://getcomposer.org/)
+
+`composer require spazzmarticus/e-css-tractor`
 
 ### Usage
 
