@@ -47,12 +47,7 @@ class eCSStractor
         $errorHandling=libxml_use_internal_errors(true);
 
         $doc=new DOMDocument();
-        $htmlLoaded=$doc->loadHTML($html, $this->_libxmlOptions);
-
-        if (!$htmlLoaded)
-        {
-            throw new \InvalidArgumentException('The HTML-Document given could not be parsed!', 1);
-        }
+        $doc->loadHTML($html, $this->_libxmlOptions);
 
         $stylesheet='';
 
