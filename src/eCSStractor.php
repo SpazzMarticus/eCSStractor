@@ -14,6 +14,10 @@ use DOMNode;
  */
 class eCSStractor
 {
+    /**
+     * Libxml-Option-Setting
+     * @var int
+     */
     protected $_libxmlOptions=0;
 
     /**
