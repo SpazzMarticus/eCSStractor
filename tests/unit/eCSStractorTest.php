@@ -32,6 +32,7 @@ class eCSStractorTest extends \PHPUnit_Framework_TestCase
             [file_get_contents($path.'01.html'), $this->loadFormat($path.'01.css')],
             [file_get_contents($path.'02.html'), $this->loadFormat($path.'02.css')],
             [file_get_contents($path.'03.html'), $this->loadFormat($path.'03.css')],
+            [file_get_contents($path.'04.html'), $this->loadFormat($path.'04.css')],
         ];
     }
 
