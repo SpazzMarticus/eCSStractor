@@ -14,6 +14,28 @@ use DOMNode;
  */
 class eCSStractor
 {
+    protected $_libxmlOptions=0;
+
+    /**
+     * Returns the Libxml-Option-Setting used when parsing the HTML string
+     * @return int
+     */
+    public function getLibxmlOptions()
+    {
+        return $this->_libxmlOptions;
+    }
+
+    /**
+     * Sets the Libxml-Option-Setting used when parsing the HTML string
+     * @link http://php.net/manual/en/libxml.constants.php
+     * @param int $libxmlOptions
+     * @return \SpazzMarticus\eCSStractor\eCSStractor
+     */
+    public function setLibxmlOptions($libxmlOptions)
+    {
+        $this->_libxmlOptions=$libxmlOptions;
+        return $this;
+    }
 
     /**
      * Extracts all CSS found in Style-Tags in the given HTML and returns it
@@ -22,8 +44,15 @@ class eCSStractor
      */
     public function extract($html)
     {
+        $errorHandling=libxml_use_internal_errors(true);
+
         $doc=new DOMDocument();
-        $doc->loadHTML($html);
+        $htmlLoaded=$doc->loadHTML($html, $this->_libxmlOptions);
+
+        if (!$htmlLoaded)
+        {
+            throw new \InvalidArgumentException('The HTML-Document given could not be parsed!', 1);
+        }
 
         $stylesheet='';
 
@@ -35,6 +64,7 @@ class eCSStractor
             $stylesheet.=$styleTag->textContent;
         }
 
+        libxml_use_internal_errors($errorHandling);
         return $stylesheet;
     }
 }
