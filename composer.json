@@ -22,11 +22,9 @@
         "php": ">=5.4.0"
     },
     "require-dev": {
-        "phpdocumentor/phpdocumentor": "*",
         "phpunit/phpunit": "^8.1"
     },
     "scripts": {
-        "test": "phpunit -c build/phpunitconfig.xml",
-        "doc": "phpdoc -c build/phpdocumentor.xml --template=\"xml\" --template=\"clean\""
+        "test": "phpunit -c build/phpunitconfig.xml"
     }
 }
