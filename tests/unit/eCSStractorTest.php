@@ -5,13 +5,19 @@ namespace SpazzMarticus\eCSStractor;
 /**
  * @uses \SpazzMarticus\eCSStractor\eCSStractor
  */
-class eCSStractorTest extends \PHPUnit_Framework_TestCase
+class eCSStractorTest extends \PHPUnit\Framework\TestCase
 {
     protected $_eCSStractor;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->_eCSStractor=new eCSStractor();
+    }
+
+    public function testLibxmlOptions()
+    {
+        $this->_eCSStractor->setLibxmlOptions(1025);
+        $this->assertSame(1025, $this->_eCSStractor->getLibxmlOptions());
     }
 
     /**
@@ -43,6 +49,10 @@ class eCSStractorTest extends \PHPUnit_Framework_TestCase
         {
             return false;
         }
-        return str_replace('%w%w','%w','%w'.preg_replace('/\s/', '%w', $format).'%w');
+        /**
+         * @see https://phpunit.readthedocs.io/en/8.1/assertions.html#assertstringmatchesformat
+         * Replacing % by %% to work properly (e.g. width: 100%) , replacing whitespace by %w
+         */
+        return '%w'.preg_replace('/\s+/', '%w', preg_replace('/%/', '%%', $format)).'%w';
     }
 }

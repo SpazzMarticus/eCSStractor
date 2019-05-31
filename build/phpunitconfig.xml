@@ -7,10 +7,8 @@
     colors="true"
     verbose="true"    
     beStrictAboutOutputDuringTests="true"
-    beStrictAboutTestSize="true"
     beStrictAboutTestsThatDoNotTestAnything="true"
     beStrictAboutTodoAnnotatedTests="true"
-    checkForUnintentionallyCoveredCode="true"
     bootstrap="../vendor/autoload.php"
     processIsolation="false"
 >
@@ -25,7 +23,7 @@
         </whitelist>
     </filter>
     <logging>
-        <log type="coverage-html" target="coverage/" higlight="true" showUncoveredFiles="true"></log>
+        <log type="coverage-html" target="coverage/" showUncoveredFiles="true"></log>
         <log type="coverage-text" target="php://stdout" showUncoveredFiles="false" showOnlySummary="true"></log>
     </logging>
 </phpunit>
