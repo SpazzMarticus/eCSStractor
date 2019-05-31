@@ -19,14 +19,12 @@
         ]
     },
     "require": {
-        "php": ">=5.4.0"
+        "php": "^7.2"
     },
     "require-dev": {
-        "phpunit/phpunit": "*",
-        "phpdocumentor/phpdocumentor": "*"
+        "phpunit/phpunit": "^8.1"
     },
     "scripts": {
-        "test": "phpunit -c build/phpunitconfig.xml",
-        "doc": "phpdoc -c build/phpdocumentor.xml --template=\"xml\" --template=\"clean\""
+        "test": "phpunit -c build/phpunitconfig.xml"
     }
 }

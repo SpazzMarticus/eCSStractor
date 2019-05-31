@@ -14,13 +14,17 @@ use DOMNode;
  */
 class eCSStractor
 {
+    /**
+     * Libxml-Option-Setting
+     * @var int
+     */
     protected $_libxmlOptions=0;
 
     /**
      * Returns the Libxml-Option-Setting used when parsing the HTML string
      * @return int
      */
-    public function getLibxmlOptions()
+    public function getLibxmlOptions(): int
     {
         return $this->_libxmlOptions;
     }
@@ -31,7 +35,7 @@ class eCSStractor
      * @param int $libxmlOptions
      * @return \SpazzMarticus\eCSStractor\eCSStractor
      */
-    public function setLibxmlOptions($libxmlOptions)
+    public function setLibxmlOptions(int $libxmlOptions)
     {
         $this->_libxmlOptions=$libxmlOptions;
         return $this;
@@ -42,7 +46,7 @@ class eCSStractor
      * @param string $html
      * @return string
      */
-    public function extract($html)
+    public function extract($html): string
     {
         $errorHandling=libxml_use_internal_errors(true);
 
